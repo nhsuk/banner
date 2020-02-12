@@ -12,8 +12,8 @@ The styles for the banner are no longer included in nhsuk-frontend. You will nee
 
 If you already include nhsuk-frontend core then you only need to add the following code to your main SCSS file:
 ```
-@import 'node_modules/nhsuk-banner/scss/emergency-alert';
-@import 'node_modules/nhsuk-banner/scss/feedback-banner';
+@import 'node_modules/nhsuk-banner/src/scss/emergency-alert';
+@import 'node_modules/nhsuk-banner/src/scss/feedback-banner';
 ```
 If you do not include nhsuk-frontend core you will need to add the following code to your main SCSS file, this ensures you have the correct varaibles and mixins available:
 
@@ -21,8 +21,8 @@ If you do not include nhsuk-frontend core you will need to add the following cod
 @import 'node_modules/nhsuk-frontend/packages/core/settings/all';
 @import 'node_modules/nhsuk-frontend/packages/core/tools/all';
 
-@import 'node_modules/nhsuk-banner/scss/emergency-alert';
-@import 'node_modules/nhsuk-banner/scss/feedback-banner';
+@import 'node_modules/nhsuk-banner/src/scss/emergency-alert';
+@import 'node_modules/nhsuk-banner/src/scss/feedback-banner';
 ```
 
 ### JavaScript
@@ -30,7 +30,7 @@ The JavaScript in this repository is written in ES6. For production use it must 
 
 Add the following file to your JavaScript build task
 ```
-node_modules/nhsuk-banner/js/banner.js
+node_modules/nhsuk-banner/src/js/banner.js
 ```
 
 ## Development
