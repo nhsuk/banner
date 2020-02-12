@@ -1,0 +1,17 @@
+name: Push to master
+
+on: push
+
+jobs:
+  build:
+    name: Push to master
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: npm install
+    - name: Run linting
+      run: npm run lint
+    - name: Run tests
+      run: npm run jest
