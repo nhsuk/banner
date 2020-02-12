@@ -1,0 +1,27 @@
+[
+	{
+		"BannerId": 1,
+		"Title": "Test emergency banner",
+		"BannerAuthor": "Tom Doughty",
+		"CreatedDate": "2020-01-01T10:00:00.000",
+		"BannerUrl": "",
+		"Including": "",
+		"Excluding": "",
+		"Invitation1": "",
+		"Invitation2": "",
+		"Agree": "",
+		"Postpone": "",
+		"Disagree": "",
+		"FromDate": "2020-01-01T10:00:00.000",
+		"FromTime": "2020-01-01T10:00:00.000",
+		"ToDate": "2030-01-01T10:00:00.000",
+		"ToTime": "2030-01-01T10:00:00.000",
+		"IsVisible": 1,
+		"DelayDays": 0,
+		"DelayHours": 0,
+		"DelayMinutes": 0,
+		"Style": "Alert",
+		"Content": "If you have recently travelled from China or are looking for information on the coronavirus outbreak please go to our page on <a href=\"https://www.nhs.uk/conditions/wuhan-novel-coronavirus/\">coronavirus</a> or the information on <a href=\"https://gov.uk/coronavirus\">GOV.UK</a>",
+		"FormattedCreatedDate": "03-02-2020 15:58:45"
+	}
+]

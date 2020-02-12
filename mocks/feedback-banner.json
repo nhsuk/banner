@@ -1,0 +1,27 @@
+[
+	{
+		"BannerId": 2,
+		"Title": "Test feedback banner",
+		"BannerAuthor": "Tom Doughty",
+		"CreatedDate": "2020-01-01T10:00:00.000",
+		"BannerUrl": "https://www.nhs.uk",
+		"Including": "",
+		"Excluding": "",
+		"Invitation1": "Tell us what you think about this page",
+		"Invitation2": "Take part in a short survey",
+		"Agree": "Yes",
+		"Postpone": "No thanks",
+		"Disagree": "",
+		"FromDate": "2020-01-01T10:00:00.000",
+		"FromTime": "2020-01-01T10:00:00.000",
+		"ToDate": "2030-01-01T10:00:00.000",
+		"ToTime": "2030-01-01T10:00:00.000",
+		"IsVisible": 1,
+		"DelayDays": 0,
+		"DelayHours": 0,
+		"DelayMinutes": 0,
+		"Style": "Default",
+		"Content": "",
+		"FormattedCreatedDate": "01-01-2020 10:00:00"
+	}
+]
