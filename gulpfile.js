@@ -18,7 +18,7 @@ function compileCSS() {
 
 // Transpile ES6
 function webpackJS() {
-  return gulp.src('src/js/banner.js')
+  return gulp.src('src/js/index.js')
     .pipe(webpack({
       mode: 'production',
       output: {
