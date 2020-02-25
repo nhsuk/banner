@@ -35,6 +35,19 @@ Add the following file to your JavaScript build task
 node_modules/nhsuk-banner/src/js/banner.js
 ```
 
+### No JavaScript solution
+The NHS.UK policy for JavaScript is progressive enhancement. As a non JavaScript solution we display a link to a content managed page which makes the alert API request server side.
+Include the following code below your header to include this functionality in your application.
+```
+<noscript>
+	<div class="nhsuk-global-alert">
+		<div class="nhsuk-width-container">
+			<a href="http://www.nhs.uk/pages/NoJsAandE.aspx">Check here for alerts</a>
+		</div>
+	</div>
+</noscript>
+```
+
 ## Development
 
 ### Application
