@@ -1,5 +1,9 @@
 @import 'node_modules/nhsuk-frontend/packages/core/settings/all';
 @import 'node_modules/nhsuk-frontend/packages/core/tools/all';
 
+@import 'node_modules/nhsuk-frontend/packages/core/objects/grid';
+@import 'node_modules/nhsuk-frontend/packages/core/objects/main-wrapper';
+@import 'node_modules/nhsuk-frontend/packages/core/objects/width-container';
+
 @import './emergency-alert';
 @import './feedback-banner';

@@ -1,3 +1,4 @@
+import './polyfills';
 import { cookieExists, setCookie } from './cookies';
 import { feedbackBannerStr, emergencyBannerStr } from './templates';
 import { insertDate } from './dateTime';
@@ -123,7 +124,6 @@ function processBanners(banners) {
     const defaultBanner = banners.find(({ Style }) => Style === 'Default');
     if (defaultBanner && bannerIsValid(defaultBanner)) banner = defaultBanner;
   }
-
   // If any kind of banner insert it
   if (banner) {
     insertBanner(banner);
@@ -136,12 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const request = new XMLHttpRequest();
   request.open('GET', bannerApiUrl, true);
   request.addEventListener('load', () => {
-    try {
-      const data = JSON.parse(request.responseText);
-      processBanners(data);
-    } catch (err) {
-      processBanners([]);
-    }
+    const data = JSON.parse(request.responseText);
+    processBanners(data);
   });
   request.send();
 });
