@@ -1,7 +1,6 @@
 import './polyfills';
 import { cookieExists, setCookie } from './cookies';
 import { feedbackBannerStr, emergencyBannerStr } from './templates';
-import { insertDate } from './dateTime';
 
 /**
  * Get relevant API URL based off current URL
@@ -32,7 +31,7 @@ export function checkUrlArray(urls) {
   const currentUrl = window.location.href.toLowerCase();
   return urls.toLowerCase()
     .split(';')
-    .includes(currentUrl);
+    .indexOf(currentUrl) >= 0;
 }
 
 /**
@@ -83,7 +82,6 @@ export function insertBanner(bannerApiData) {
     // Insert emergency banner below header
     const headerEl = document.getElementsByTagName('header');
     headerEl[0].parentElement.insertBefore(bannerDiv.firstChild, headerEl[0].nextElementSibling);
-    insertDate(bannerApiData.CreatedDate);
   } else if (bannerApiData.Style === 'Default') {
     // Insert feedback banner in footer
     bannerDiv.firstChild.style.display = 'block';

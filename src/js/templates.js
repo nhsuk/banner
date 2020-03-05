@@ -12,11 +12,7 @@ export const feedbackBannerStr = `<div class="nhsuk-feedback-banner" id="nhsuk-f
 </p>
 <p class="nhsuk-u-margin-bottom-0">We"ll use a cookie to save your choice.</p>
 <button class="nhsuk-feedback-banner__close" id="nhsuk-feedback-banner-close" type="button">Hide<span class="nhsuk-u-visually-hidden"> feedback invite</span></button>
-</div>
-</div>
-</div>
-</div>
-</div>`;
+</div></div></div></div></div>`;
 
 export const emergencyBannerStr = `<div class="nhsuk-global-alert" id="nhsuk-global-alert">
 <div class="nhsuk-width-container">
@@ -24,9 +20,4 @@ export const emergencyBannerStr = `<div class="nhsuk-global-alert" id="nhsuk-glo
 <div class="nhsuk-grid-column-full">
 <div class="nhsuk-global-alert__content">
 <p class="nhsuk-global-alert__message">[Content]</p>
-<p id="last-updated" class="nhsuk-global-alert__updated"></p>
-</div>
-</div>
-</div>
-</div>
-</div >`;
+</div></div></div></div></div>`;

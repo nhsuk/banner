@@ -12,8 +12,4 @@ export default `<div class="nhsuk-feedback-banner" id="nhsuk-feedback-banner" st
 </p>
 <p class="nhsuk-u-margin-bottom-0">We"ll use a cookie to save your choice.</p>
 <button class="nhsuk-feedback-banner__close" id="nhsuk-feedback-banner-close" type="button">Hide<span class="nhsuk-u-visually-hidden"> feedback invite</span></button>
-</div>
-</div>
-</div>
-</div>
-</div>`;
+</div></div></div></div></div>`;

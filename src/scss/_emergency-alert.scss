@@ -56,8 +56,3 @@
 	@include nhsuk-responsive-margin(2, 'top');  
 	margin-bottom: 0;
 }
-  
-.nhsuk-global-alert__updated {
-	@include nhsuk-responsive-margin(2, 'top');
-	@include nhsuk-typography-responsive(14);
-}
