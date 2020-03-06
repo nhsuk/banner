@@ -1,5 +1,8 @@
-# NHS UK Banner
+# WIP - NHS UK Banner
 ![Master](https://github.com/tomdoughty/banner/workflows/Push%20to%20master/badge.svg?event=push)
+
+## WIP
+This readme is a draft for when this codebase is consumed via NPM
 
 In house solution for managing the emergency banner and feedback banners on [nhs.uk](https://www.nhs.uk).
 
