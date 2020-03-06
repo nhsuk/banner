@@ -20,8 +20,8 @@ describe('getBannerApiUrl()', () => {
     delete window.location;
     delete window.NHSUK_SETTINGS;
     window.NHSUK_SETTINGS = {
-      BANNER_TEST_API_URL: 'https://test.api.com',
       BANNER_API_URL: 'https://prod.api.com',
+      BANNER_TEST_API_URL: 'https://test.api.com',
     };
   });
 
@@ -113,9 +113,9 @@ describe('isMatchedUrl()', () => {
 
 describe('bannerIsValid()', () => {
   const bannerApiData = {
+    BannerId: 1,
     Excluding: 'https://test0.com/;https://test1.com/',
     Including: 'https://test2.com/;https://test3.com/',
-    BannerId: 1,
   };
 
   it('returns false if the current url is an excluded url', () => {

@@ -21,10 +21,6 @@ function webpackJS() {
   return gulp.src('src/js/index.js')
     .pipe(webpack({
       mode: 'production',
-      output: {
-        filename: 'banner.js',
-      },
-      target: 'web',
       module: {
         rules: [
           {
@@ -37,6 +33,10 @@ function webpackJS() {
           },
         ],
       },
+      output: {
+        filename: 'banner.js',
+      },
+      target: 'web',
     }))
     .pipe(gulp.dest('./dist'));
 }

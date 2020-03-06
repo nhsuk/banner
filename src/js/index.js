@@ -80,7 +80,7 @@ export function insertBanner(bannerApiData) {
 
   if (bannerApiData.Style === 'Alert') {
     // Insert emergency banner below header
-    const headerEl = document.getElementsByTagName('header')[0];
+    const [headerEl] = document.getElementsByTagName('header');
     headerEl.parentElement.insertBefore(bannerDiv.firstChild, headerEl.nextElementSibling);
   } else if (bannerApiData.Style === 'Default') {
     // Insert feedback banner in footer
