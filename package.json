@@ -20,13 +20,20 @@
     "core-js": "^3.6.4",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-nhsuk": "^1.0.0",
     "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-sass": "^4.0.2",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
     "nhsuk-frontend": "^3.0.2",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  }
 }
