@@ -41,18 +41,28 @@
 		@include nhsuk-link-style-inverted; /* [1] */
 	}
 }
-  
-.nhsuk-global-alert__heading {
-	@include nhsuk-typography-responsive(24);  
-	margin: 0;
-}
-  
+
 .nhsuk-global-alert__content {
 	@include top-and-bottom;  
 	position: relative;
 }
   
 .nhsuk-global-alert__message {
-	@include nhsuk-responsive-margin(2, 'top');  
-	margin-bottom: 0;
+	h2, h3 {
+		font-size: 24px;
+	    line-height: 1.33333; 
+		margin: 0;
+	}
+
+	p {
+		@include nhsuk-responsive-margin(2, 'top');
+		font-size: 16px;
+		line-height: 1.5;
+		display: block; 
+		margin-bottom: 0;
+
+		@media (min-width: 40.0625em) {
+			font-size: 19px;
+		}
+	}
 }

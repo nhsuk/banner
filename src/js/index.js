@@ -45,7 +45,7 @@ export function checkUrlArray(urls) {
 export function isMatchedUrl(excludedUrls, includedUrls) {
   // Return false if current url is excluded
   if (checkUrlArray(excludedUrls)) return false;
-  // Is includedUrls empty or does it contain the current url
+  // Return true if includedUrls is empty or it contain the current url
   return (includedUrls.length === 0 || checkUrlArray(includedUrls));
 }
 
@@ -66,13 +66,13 @@ export function bannerIsValid(bannerApiData) {
  * Insert the alert, survey and invitation banner HTML in to DOM and attach event handlers.
  * Headers are not the same all over because they are using an outdated version of the
  * frontend library.
- * The refElement targets the first nav on the page and inserts the banner before the next sibling.
  * @param {object} bannerApiData
- * @returns {undefined}
+ * @returns {void}
  */
 export function insertBanner(bannerApiData) {
   // Build HTML from templates using banner data
   const bannerDiv = document.createElement('div');
+  // Get template based on banner style
   const bannerTemplate = bannerApiData.Style === 'Alert' ? emergencyBannerStr : feedbackBannerStr;
   // Replaces any [key] in the template with content from the banner api
   bannerDiv.innerHTML = bannerTemplate.replace(/\[(\w*)\]/g,
@@ -80,8 +80,8 @@ export function insertBanner(bannerApiData) {
 
   if (bannerApiData.Style === 'Alert') {
     // Insert emergency banner below header
-    const headerEl = document.getElementsByTagName('header');
-    headerEl[0].parentElement.insertBefore(bannerDiv.firstChild, headerEl[0].nextElementSibling);
+    const headerEl = document.getElementsByTagName('header')[0];
+    headerEl.parentElement.insertBefore(bannerDiv.firstChild, headerEl.nextElementSibling);
   } else if (bannerApiData.Style === 'Default') {
     // Insert feedback banner in footer
     bannerDiv.firstChild.style.display = 'block';
@@ -130,12 +130,19 @@ function processBanners(banners) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const bannerApiUrl = getBannerApiUrl();
-
   const request = new XMLHttpRequest();
   request.open('GET', bannerApiUrl, true);
-  request.addEventListener('load', () => {
-    const data = JSON.parse(request.responseText);
-    processBanners(data);
-  });
+  request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+  request.onreadystatechange = () => {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        const data = JSON.parse(request.responseText);
+        processBanners(data);
+      }
+      processBanners([]);
+    }
+  };
+
   request.send();
 });

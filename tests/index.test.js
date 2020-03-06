@@ -12,6 +12,8 @@ import alertBannerData from '../mocks/emergency-banner.json';
 import alertBannerMarkup from '../mocks/emergency-banner';
 import feedbackBannerData from '../mocks/feedback-banner.json';
 import feedbackBannerMarkup from '../mocks/feedback-banner';
+import coronavirusBannerData from '../mocks/coronavirus-banner.json';
+import coronavirusBannerMarkup from '../mocks/coronavirus-banner';
 
 describe('getBannerApiUrl()', () => {
   beforeEach(() => {
@@ -169,7 +171,13 @@ describe('insertBanner()', () => {
     expect(banner.outerHTML).toBe(alertBannerMarkup);
   });
 
-  it('inserts an feedback banner when passed feedback banner data and template', () => {
+  it('inserts the coronavirus banner when passed banner data and template', () => {
+    insertBanner(coronavirusBannerData[0], feedbackBannerMarkup);
+    const banner = document.getElementById('nhsuk-global-alert');
+    expect(banner.outerHTML).toBe(coronavirusBannerMarkup);
+  });
+
+  it('inserts a feedback banner when passed feedback banner data and template', () => {
     jest.useFakeTimers();
     insertBanner(feedbackBannerData[0], feedbackBannerMarkup);
     jest.advanceTimersByTime(3000);

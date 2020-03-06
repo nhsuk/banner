@@ -1,0 +1,27 @@
+[
+	{
+		"BannerId": 735,
+		"Title": "Coronavirus (COVID-19)",
+		"BannerAuthor": "Matt Bancroft",
+		"CreatedDate": "2020-03-05T16:15:24.627",
+		"BannerUrl": "",
+		"Including": "",
+		"Excluding": "",
+		"Invitation1": "",
+		"Invitation2": "",
+		"Agree": "",
+		"Postpone": "",
+		"Disagree": "",
+		"FromDate": "2016-01-01T16:26:00",
+		"FromTime": "0001-01-01T00:00:00",
+		"ToDate": "9999-12-31T16:26:00",
+		"ToTime": "0001-01-01T00:00:00",
+		"IsVisible": 1,
+		"DelayDays": 0,
+		"DelayHours": 0,
+		"DelayMinutes": 0,
+		"Style": "Alert",
+		"Content": "<h2>Coronavirus (COVID-19)</h2><p>Read our pages on <a href=\"https://www.nhs.uk/conditions/coronavirus-covid-19/\">coronavirus</a> for health information and advice. See the <a href=\"https://gov.uk/coronavirus\">government response to coronavirus on GOV.UK</a>.</p>",
+		"FormattedCreatedDate": "05-03-2020 16:15:24"
+	}
+]

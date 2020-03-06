@@ -7,7 +7,7 @@
     "start": "gulp",
     "test": "npm run lint && npm run jest",
     "lint": "eslint . --ignore-pattern '/dist'",
-    "jest": "jest --collectCoverage"
+    "jest": "jest"
   },
   "author": "",
   "license": "ISC",
