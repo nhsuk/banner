@@ -1,6 +1,5 @@
 node_modules
-# commiting dist until we have time to support teams moving to npm
-dist/nhsuk.css
+dist
 npm-debug.log
 .env
 .DS_Store
