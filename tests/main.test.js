@@ -1,7 +1,7 @@
 import {
   getBannerApiUrl,
   insertBanner,
-} from '../src/js';
+} from '../src/js/main';
 
 import alertBannerData from '../mocks/emergency-banner.json';
 import alertBannerMarkup from '../mocks/emergency-banner';
