@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const cleanCss = require('gulp-clean-css');
 const webpack = require('webpack-stream');
 const browserSync = require('browser-sync').create();
