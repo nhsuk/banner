@@ -128,21 +128,23 @@ function processBanners(banners) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const bannerApiUrl = getBannerApiUrl();
-  const request = new XMLHttpRequest();
-  request.open('GET', bannerApiUrl, true);
-  request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+if (!navigator.userAgent.includes('nhsapp-')) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const bannerApiUrl = getBannerApiUrl();
+    const request = new XMLHttpRequest();
+    request.open('GET', bannerApiUrl, true);
+    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
-  request.onreadystatechange = () => {
-    if (request.readyState === 4) {
-      if (request.status === 200) {
-        const data = JSON.parse(request.responseText);
-        processBanners(data);
+    request.onreadystatechange = () => {
+      if (request.readyState === 4) {
+        if (request.status === 200) {
+          const data = JSON.parse(request.responseText);
+          processBanners(data);
+        }
+        processBanners([]);
       }
-      processBanners([]);
-    }
-  };
+    };
 
-  request.send();
-});
+    request.send();
+  });
+}
